@@ -63,7 +63,7 @@
   padding-left: 30px;
   margin: 1em auto 1.5em auto;
   line-height: 2;
-  list-style: none;
+  list-style: disc;
   color: #666;
   width: 240px;
 }
@@ -103,6 +103,16 @@
   background-color: #B72E2E;
 }
 
+.escondeVisualmente {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
 
 @media (min-width: 830px) {
 

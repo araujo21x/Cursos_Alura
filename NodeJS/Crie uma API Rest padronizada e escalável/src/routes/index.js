@@ -1,7 +1,5 @@
-const routes = require('express').Router();
-const providersController = require('../controllers/providersController');
+const providers = require('./providersRoutes')
 
-routes.route('/')
-  .get(providersController.index);
-
-module.exports = routes;
+module.exports = (app) => {
+  app.use(providers);
+};

@@ -19,7 +19,8 @@ const columns = {
 const options = {
   freezeTableName: false,
   tableName: 'companies',
-  timestamps: true
+  timestamps: true,
+  version: 'version'
 };
 
 module.exports = dataBase.define('company', columns, options);

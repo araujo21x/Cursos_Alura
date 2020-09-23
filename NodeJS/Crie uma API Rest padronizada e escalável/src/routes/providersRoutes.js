@@ -7,6 +7,7 @@ router.route('/providers')
 
 router.route('/providers/:id')
   .get(providersController.show)
-  .put(providersController.update);
-
+  .put(providersController.update)
+  .delete(providersController.delete);
+  
 module.exports = router;

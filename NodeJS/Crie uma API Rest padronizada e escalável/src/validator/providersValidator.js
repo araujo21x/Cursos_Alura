@@ -5,6 +5,17 @@ exports.factoryProviders = async (require) => {
 
 exports.validProviders = async (require) => {
   const { company, email, category } = require.body;
+  if (!company) throw new Error('Empresa é obrigatório.');
+  if (!email) throw new Error('Email é obrigatório.');
+  if (!category) throw new Error('Categoria é obrigatório.');
+  if (category !== 'ração' && category !== 'brinquedo') throw new Error('Categoria Inválida.');
+
+
+  return
+}
+
+exports.validProvidersEdit = async (require) => {
+  const { company, email, category } = require.body;
   if (company !== undefined)
     if (!company) throw new Error('Empresa é obrigatório.');
   if (email !== undefined)

@@ -15,10 +15,16 @@ class ProvidersRepository {
     return result;
   }
 
-  async edit(provider, id){
-    //ver qual comando para editar
-    return await dbProviders.edit(provider);
+  async edit(provider, id) {
+    await this.findById(id);
+    return await dbProviders.update(provider, { where: { id } });
+  }
+
+  async delete(id) {
+    await this.findById(id);
+    return await dbProviders.destroy({ where: { id } })
   }
 }
+
 
 module.exports = new ProvidersRepository();
